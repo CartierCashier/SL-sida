@@ -1,0 +1,302 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.navbar-container{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    background-color: #2870F0;
+    padding: auto;
+    height: 112px;
+}
+
+.navbar-container a {
+    color: white;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 0 20px;
+}
+
+.navbar-container img {
+    width: 85px;
+    height: 70px;
+}
+
+button.side{
+    cursor: pointer;
+    transform: translate(10px,25px);
+    background-color: white;
+    border: none;
+    height: 48px;
+}
+
+.tab-container {
+    background-image: url(tunnelbana_tekniska_hogskolan.jpg);
+    height: 600px;
+    padding: 20px;
+}
+
+.tab-button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 100px;
+}
+
+a.resa {
+    color: white;
+    background-color: blue;
+    font-size: 1.25rem;
+    font-weight: 600;
+    padding: 15px 30px;
+    border-radius: 5px;
+}
+
+a.active-tab {
+    background-color: white;
+    color: black;
+}
+
+.resaForm {
+    background: rgb(241, 242, 243);
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 1100px;
+    margin: 0 auto;
+    color: black;
+}
+
+.resaForm h1 {
+    margin: 0 0 20px 0;
+    text-align: center;
+}
+
+.från-till-group {
+    display: flex;
+    gap: 25px;
+    width: 100%;
+}
+
+.input-group {
+    flex: 1;
+}
+
+.input-group label {
+    display: block;
+    font-weight: 700;
+    font-size: 18px;
+    margin: 10px 0 5px 0;
+}
+
+.plats {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.nånting {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+input[type="radio"] {
+    width: 26px;
+    height: 26px;
+}
+
+.datum-container {
+    width: 300px;
+    margin-top: 15px;
+}
+
+.datum-tid-group {
+    display: flex;
+    gap: 40px;
+}
+
+input[type="date"],
+input[type="time"] {
+    padding: 8px 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+}
+
+.sök {
+    width: 300px;
+    padding: 12px;
+    background-color: #2870F0;
+    font-weight: 700;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    display: block;
+    margin: 0 auto;
+}
+
+.dropdown {
+    position: absolute;
+    background: white;
+    width: 300px;
+    max-height: 440px;
+    overflow-y: auto;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 1000;
+}
+
+.dropdown li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.dropdown li:hover {
+    background: #0b55d6;
+    color: white;
+}
+
+.trip {
+    background-color: #f1f2f3;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.trip:hover {
+    border: 2px solid lightblue;
+}
+
+.trip .summary {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.trip .icons {
+    font-size: 24px;
+    margin-top: 8px;
+}
+
+#searchResults {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+    max-width: 1160px;
+    margin: auto;
+}
+
+@media only screen and (max-width: 376px) {
+    .navbar-container a:not(:first-child),
+    .navbar-container button,
+    .navbar-container i {
+      display: none !important;
+    }
+  
+    .navbar-container {
+      justify-content: center;
+      height: 80px;
+      padding: 10px;
+    }
+    
+    .navbar-container img {
+      width: 60px;
+      height: 50px;
+    }
+    input#fromStation.plats, input#toStation.plats{
+        padding-right: 0;
+    } 
+    .tab-container {
+      height: auto;
+      padding: 10px;
+      background-size: cover;
+    }
+    
+    .tab-button-container {
+      padding-top: 20px;
+    }
+    
+    a.resa {
+      font-size: 32px;
+      padding: 10px 15px;
+    }
+    
+    .resaForm {
+      width: 100%;
+      height: auto;
+      padding: 15px;
+      box-sizing: border-box;
+    }
+    
+    .från-till-group {
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    .img {
+      display: flex;
+      justify-content: center;
+      transform: rotate(90deg);
+      margin: 5px 0;
+    }
+    
+    .nånting {
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    input.plats{
+        padding-right: 0;
+        width: 330px !important;
+        padding-left: 5px;
+    }
+    label.active{
+        white-space: nowrap;
+        font-size: medium;
+    }
+    .sök {
+      width: 100%;
+      transform: none;
+      margin-top: 15px;
+    }
+    
+    .dropdown {
+      width: calc(100% - 30px);
+    }
+    
+    .datum-tid-group {
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    .datum-container {
+      width: 100%;
+    }
+    
+    #searchResults {
+      width: 100%;
+      padding: 5px;
+    }
+    
+    .trip .summary {
+      font-size: 16px;
+    }
+    
+    .trip .icons {
+      font-size: 18px;
+    }
+    span.time{
+        font-weight: 700;
+    }
+    
+    .tab-button-container {
+      padding-top: 30px;
+    }
+  }

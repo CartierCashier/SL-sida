@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SL</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+<header>
+  <div class="navbar-container">
+    <a href="index.html">
+      <img src="sl-logo.png" width="85" height="70" alt="SL-logotyp">
+    </a>
+    <a href="#Reseplanering">Reseplanering</a>
+    <a href="#Biljetter">Biljetter</a>
+    <a href="#Kundservice">Kundservice</a>
+    <a href="#Aktuell">Aktuellt</a>
+  </div>
+</header>
+<div class="tab-container">
+  <div class="tab-button-container">
+    <a href="#" class="resa active-tab" onclick="openTab('resaTab')">Sök Resa</a>   
+  </div>
+  <div id="resaTab" class="tab-content active">
+    <form class="resaForm">
+      <h1>Vart vill du åka?</h1>
+      <div class="från-till-group">
+        <div class="input-group">
+          <label>Från</label>
+          <input type="text" id="fromStation" class="plats" autocomplete="off">
+        </div>
+        <div class="img">
+          <button type="button" class="side" id="side">
+            <img src="lanes.png" alt="lanes" width="48" height="48">
+          </button>
+        </div>
+        <div class="input-group">
+          <label>Till</label>
+          <input type="text" id="toStation" class="plats" autocomplete="off">
+        </div>
+      </div>
+      
+      <div class="tid-val">
+        <div class="input-group">
+          <label>När vill du åka?</label>
+          <div class="nånting">
+            <input type="radio" id="åka" name="när" checked>
+            <label for="åka" class="active">Åka Nu</label>
+            
+            <input type="radio" id="avgång" name="när">
+            <label for="avgång">Avgångstid</label>
+            
+            <input type="radio" id="ankomsttid" name="när">
+            <label for="ankomsttid">Ankomsttid</label>
+          </div>
+        </div>
+        <div class="datum-container" style="display: none;">
+          <div class="datum-tid-group">
+            <div class="input-group">
+              <label>Dag</label>
+              <input type="date" class="plats" value="2025-05-27">
+            </div>
+            <div class="input-group">
+              <label>Tid</label>
+              <input type="time" class="plats" value="14:00">
+            </div>
+          </div>
+        </div>
+      </div>
+      <button type="button" id="searchBtn" class="sök">Sök</button>
+    </form>
+    <div id="searchResults" class="search-results">
+  </div>
+</div>
+<script src="datum.js"></script>
+<script src="script.js"></script>
+<script src="dropdown.js"></script>
+</body>
+</html>
